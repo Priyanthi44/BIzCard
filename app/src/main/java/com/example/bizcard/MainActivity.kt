@@ -84,7 +84,7 @@ fun CreateBizCard(innerPadding: PaddingValues) {
                     verticalArrangement = Arrangement.Top,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    CreateProfilePic(pmodifier = Modifier
+                    CreateProfilePic(modifier = Modifier
                         .size(150.dp)
                         .padding(12.dp))
                     Divider(
@@ -106,9 +106,7 @@ fun CreateBizCard(innerPadding: PaddingValues) {
                     if (!buttonClickedState.value) {
                         ContentList()
                     } else {
-                        Box() {
-
-                        }
+                        Box{}
                     }
                 }
 
@@ -144,9 +142,9 @@ fun CreateText(tfontsize: TextStyle, tcolor: Color, text: String) {
 }
 
 @Composable
-fun CreateProfilePic(pmodifier: Modifier) {
+fun CreateProfilePic(modifier: Modifier) {
     Surface(
-        modifier = pmodifier,
+        modifier = modifier,
         shape = CircleShape,
 
         border = BorderStroke(0.5.dp, color = Color.White),
@@ -195,7 +193,7 @@ fun Portforlio(data: List<String>) {
                 Row(
                     modifier = Modifier.padding(8.dp),
                 ) {
-                        CreateProfilePic(pmodifier = Modifier
+                        CreateProfilePic(modifier = Modifier
                             .size(50.dp)
                             .padding(3.dp))
                     Column (modifier = Modifier.padding(7.dp).align(alignment = Alignment.CenterVertically)) {
